@@ -635,6 +635,8 @@ class Listing(PrimaryAPIObject):
     release = ObjectField('Release')
     seller = ObjectField('User')
     posted = SimpleField(transform=parse_timestamp)
+    location = SimpleField()
+    weight = SimpleField()
 
     def __init__(self, client, dict_):
         super(Listing, self).__init__(client, dict_)
